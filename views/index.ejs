@@ -22,13 +22,13 @@
 </head>
 
 <body>
-  <%- include('./Components/dark-light.ejs') %>
+  <%- include('./components/dark-light.ejs') %>
 
     <main class="d-flex flex-nowrap">
-      <%- include('./Components/sidebar.ejs', {currentPage: "index" }) %>
+      <%- include('./components/sidebar.ejs', {currentPage: "index" }) %>
 
         <section class="w-100">
-          <%- include('./Components/navbar.ejs') %>
+          <%- include('./components/navbar.ejs') %>
             <% if (arr.length===0) { %>
               <h1 style="margin-top: 50px;" class="text-center display-6">There is no data to show</h1>
 
