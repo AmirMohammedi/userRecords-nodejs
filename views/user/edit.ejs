@@ -24,14 +24,14 @@
 </head>
 
 <body>
-  <%- include('../Components/dark-light.ejs') %>
+  <%- include('../components/dark-light.ejs') %>
 
     <main class="d-flex flex-nowrap">
-      <%- include('../Components/sidebar.ejs', {currentPage: "edit" }) %>
+      <%- include('../components/sidebar.ejs', {currentPage: "edit" }) %>
 
 
         <section class="w-100">
-          <%- include('../Components/navbar.ejs') %>
+          <%- include('../components/navbar.ejs') %>
 
 
             <nav class="px-2 mt-4 d-flex flex-wrap justify-content-between" aria-label="breadcrumb">
@@ -48,14 +48,6 @@
                 <%= user._id %>
               </p>
             </nav>
-
-
-
-
-
-
-
-
             <form action="/edit/<%= user._id %>?_method=PUT" method="post" class="mx-0 row gx-3 gy-4 mt-2">
               <div class="col-md-6">
                 <label for="inputfirstName4" class="form-label">First Name:</label>
