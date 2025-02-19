@@ -30,10 +30,9 @@ liveReloadServer.server.once("connection", () => {
 
 
 
-
-
+require("dotenv").config();
 mongoose
-  .connect("mongodb+srv://amirmohammedi:6JXBgQZp24KF78H@cluster0.jwk1eci.mongodb.net/all-data?retryWrites=true&w=majority&appName=Cluster0")
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     app.listen(port, () => {
       console.log(`http://localhost:${port}/`);
